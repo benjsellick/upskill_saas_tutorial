@@ -7,6 +7,7 @@ class UsersController < ApplicationController
     end
     
     def index
-        
+        #Uses a join. optimizes the query, search active record includes
+       @users = User.includes(:profile) 
     end
 end
